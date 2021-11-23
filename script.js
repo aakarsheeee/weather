@@ -10,7 +10,7 @@ getData('Lucknow');
 function getData(city) {
     console.log("the city in getData is", city);
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://api.weatherapi.com/v1/current.json?key=${api}&q=${city}&aqi=yes`, true);
+    xhr.open('GET', `https://api.weatherapi.com/v1/current.json?key=${api}&q=${city}&aqi=yes`, true);
     xhr.onload = function () {
         if (this.status === 200) {
             let json = JSON.parse(this.responseText);
